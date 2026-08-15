@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Sovereign Mail is customer-owned multi-domain email infrastructure with governed AI agents.">
+  <meta name="theme-color" content="#08111f">
+  <meta property="og:title" content="Sovereign Mail">
+  <meta property="og:description" content="Own the infrastructure. Govern the agents. Keep control of every domain.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/styles.css">
+  <title>Sovereign Mail — Email infrastructure you control</title>
+</head>
+<body>
+  <header class="nav shell">
+    <a class="brand" href="#top" aria-label="Sovereign Mail home">
+      <img src="/favicon.svg" width="34" height="34" alt="">
+      <span>Sovereign Mail</span>
+    </a>
+    <nav aria-label="Primary navigation">
+      <a href="#architecture">Architecture</a>
+      <a href="#agents">Agent harness</a>
+      <a href="#roadmap">Roadmap</a>
+      <a class="nav-cta" href="https://github.com/shadoprizm/mailsovereign">View source</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero shell">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="pulse"></span> Open-source infrastructure, under active development</div>
+        <h1>Your domains.<br><span>Your mail.</span><br>Your rules.</h1>
+        <p class="lede">Run email across every domain from infrastructure you control, then give governed AI agents the power to triage, draft, route, and follow up without silently sending on your behalf.</p>
+        <div class="actions">
+          <a class="button primary" href="https://github.com/shadoprizm/mailsovereign">Follow the build <span>↗</span></a>
+          <a class="button secondary" href="#architecture">Explore the system</a>
+        </div>
+        <div class="proof-strip" aria-label="Product principles">
+          <span>AGPL open source</span><i></i><span>Customer-owned data</span><i></i><span>Approval-gated agents</span>
+        </div>
+      </div>
+
+      <div class="cockpit" aria-label="Illustration of Sovereign Mail routing domains through policy-gated agents">
+        <div class="cockpit-head">
+          <div><span class="status-dot"></span> Sovereign control plane</div>
+          <span class="live-label">POLICY ACTIVE</span>
+        </div>
+        <div class="domain-list">
+          <article class="domain-card selected">
+            <div class="domain-mark amber">MS</div>
+            <div><strong>mailsovereign.com</strong><small>Primary domain · healthy</small></div>
+            <span class="health">●</span>
+          </article>
+          <article class="domain-card">
+            <div class="domain-mark blue">NS</div>
+            <div><strong>northstar.example</strong><small>3 mailboxes · monitored</small></div>
+            <span class="health">●</span>
+          </article>
+          <article class="domain-card">
+            <div class="domain-mark violet">AW</div>
+            <div><strong>agency.example</strong><small>8 aliases · monitored</small></div>
+            <span class="health">●</span>
+          </article>
+        </div>
+        <div class="route-line"><span>Inbound message</span><b></b><span>Policy engine</span></div>
+        <div class="agent-card">
+          <div class="agent-icon">✦</div>
+          <div class="agent-copy"><strong>Agent proposed a reply</strong><small>Evidence attached · sender scope verified</small></div>
+          <span class="awaiting">AWAITING APPROVAL</span>
+        </div>
+        <div class="cockpit-foot"><span>Read ✓</span><span>Classify ✓</span><span>Draft ✓</span><span class="locked">Send requires approval</span></div>
+      </div>
+    </section>
+
+    <section class="manifesto">
+      <div class="shell manifesto-grid">
+        <p class="section-number">01 / PRINCIPLE</p>
+        <div>
+          <h2>Email should be infrastructure,<br>not another landlord.</h2>
+          <p>Conventional hosting charges per mailbox while keeping operations opaque. Sovereign Mail is being built around domains you own, resources you control, and migration paths you can reverse.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section shell" id="architecture">
+      <div class="section-intro">
+        <p class="section-number">02 / ARCHITECTURE</p>
+        <h2>One cockpit for the entire mail estate.</h2>
+        <p>Separate the public surface, operator controls, and delivery infrastructure without losing one coherent system.</p>
+      </div>
+      <div class="feature-grid">
+        <article class="feature wide">
+          <div class="feature-top"><span>DOMAIN OPERATIONS</span><b>01</b></div>
+          <h3>Every domain, visible at once.</h3>
+          <p>Mailboxes, aliases, catch-all policy, DNS readiness, reputation signals, storage, and delivery health in one operator view.</p>
+          <div class="mini-domains"><span>mailsovereign.com <i>ready</i></span><span>client-one.com <i>ready</i></span><span>client-two.ca <i>review</i></span></div>
+        </article>
+        <article class="feature">
+          <div class="feature-top"><span>SAFE MIGRATION</span><b>02</b></div>
+          <h3>No blind MX cutovers.</h3>
+          <p>Capture the current state, generate a migration plan, verify prerequisites, and retain a tested rollback record.</p>
+        </article>
+        <article class="feature">
+          <div class="feature-top"><span>DELIVERABILITY</span><b>03</b></div>
+          <h3>Configuration is not proof.</h3>
+          <p>Test real delivery against major providers, inspect authentication, and block production claims until messages arrive.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="agent-section" id="agents">
+      <div class="shell agent-layout">
+        <div class="section-intro light">
+          <p class="section-number">03 / AGENT HARNESS</p>
+          <h2>Useful autonomy.<br>Explicit authority.</h2>
+          <p>Agents operate through narrow capabilities, live mailbox permissions, policy evaluation, and durable audit evidence.</p>
+        </div>
+        <div class="policy-stack">
+          <div class="policy"><span>01</span><div><strong>Observe</strong><small>Read and classify allowed mailboxes</small></div><b>ALLOW</b></div>
+          <div class="policy"><span>02</span><div><strong>Prepare</strong><small>Summarize, extract, route, and draft</small></div><b>ALLOW</b></div>
+          <div class="policy"><span>03</span><div><strong>Commit</strong><small>Send, delete, export, or change routing</small></div><b class="review">REVIEW</b></div>
+          <div class="audit-line">Every action → identity · source · policy · approval · outcome</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section shell" id="roadmap">
+      <div class="section-intro">
+        <p class="section-number">04 / BUILD STATUS</p>
+        <h2>Built in public, gated by evidence.</h2>
+      </div>
+      <ol class="roadmap">
+        <li class="done"><span>01</span><div><strong>Secure the foundation</strong><small>Fork, identity, test baseline, dependency hardening</small></div><b>COMPLETE</b></li>
+        <li class="active"><span>02</span><div><strong>Prove migration and delivery</strong><small>DNS snapshots, rollback, provider delivery tests</small></div><b>IN PROGRESS</b></li>
+        <li><span>03</span><div><strong>Operate every domain</strong><small>Health, mailboxes, aliases, retention, recovery</small></div><b>QUEUED</b></li>
+        <li><span>04</span><div><strong>Govern the agents</strong><small>Scopes, policy, approvals, audit, integrations</small></div><b>QUEUED</b></li>
+      </ol>
+    </section>
+
+    <section class="closing shell">
+      <div>
+        <p class="section-number">SOVEREIGN MAIL</p>
+        <h2>Own the route from domain<br>to decision.</h2>
+      </div>
+      <a class="button primary" href="https://github.com/shadoprizm/mailsovereign">Watch it take shape <span>↗</span></a>
+    </section>
+  </main>
+
+  <footer class="shell footer">
+    <span>© <span id="year"></span> Sovereign Mail</span>
+    <span>Independent AGPL project, forked from HQBase</span>
+    <a href="https://github.com/shadoprizm/mailsovereign">GitHub ↗</a>
+  </footer>
+  <script src="/script.js" defer></script>
+</body>
+</html>
