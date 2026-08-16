@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://mailsovereign.com/sitemap.xml
+Sitemap: https://sovereignmail.com/sitemap.xml

@@ -4,6 +4,8 @@ import { readFile } from "node:fs/promises";
 
 const html = await readFile(new URL("../index.html", import.meta.url), "utf8");
 const config = JSON.parse(await readFile(new URL("../vercel.json", import.meta.url), "utf8"));
+const robots = await readFile(new URL("../robots.txt", import.meta.url), "utf8");
+const sitemap = await readFile(new URL("../sitemap.xml", import.meta.url), "utf8");
 
 test("publishes the Sovereign Mail identity without unsupported launch claims", () => {
   assert.match(html, /Sovereign Mail/);
@@ -15,6 +17,13 @@ test("describes both multi-domain infrastructure and governed agents", () => {
   assert.match(html, /Every domain, visible at once/);
   assert.match(html, /Agent harness/i);
   assert.match(html, /Send requires approval/i);
+});
+
+test("uses sovereignmail.com as the canonical public domain", () => {
+  for (const source of [html, robots, sitemap]) {
+    assert.match(source, /sovereignmail\.com/);
+    assert.doesNotMatch(source, /mailsovereign\.com/);
+  }
 });
 
 test("uses only secure external links", () => {
