@@ -26,6 +26,11 @@ test("uses sovereignmail.com as the canonical public domain", () => {
   }
 });
 
+test("links the public site to the authenticated application", () => {
+  assert.match(html, /href="https:\/\/app\.sovereignmail\.com"/);
+  assert.match(html, /Open Sovereign Mail/);
+});
+
 test("uses only secure external links", () => {
   const externalLinks = [...html.matchAll(/href="(https?:[^\"]+)"/g)].map((match) => match[1]);
   assert.ok(externalLinks.length > 0);
