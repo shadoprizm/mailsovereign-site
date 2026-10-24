@@ -3,16 +3,16 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="Sovereign Mail is customer-owned multi-domain email infrastructure with governed AI agents.">
+  <meta name="description" content="Connect existing email across your domains in one private workspace without moving your websites, DNS, or mail hosting.">
   <meta name="theme-color" content="#08111f">
   <meta property="og:title" content="Sovereign Mail">
-  <meta property="og:description" content="Own the infrastructure. Govern the agents. Keep control of every domain.">
+  <meta property="og:description" content="Your domains, your existing mail providers, one private workspace.">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://sovereignmail.com/">
-  <link rel="canonical" href="https://sovereignmail.com/">
+  <meta property="og:url" content="https://mailsovereign.com/">
+  <link rel="canonical" href="https://mailsovereign.com/">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="/styles.css">
-  <title>Sovereign Mail — Email infrastructure you control</title>
+  <title>Sovereign Mail — One workspace for mail across your domains</title>
 </head>
 <body>
   <header class="nav shell">
@@ -21,10 +21,11 @@
       <span>Sovereign Mail</span>
     </a>
     <nav aria-label="Primary navigation">
-      <a href="#architecture">Architecture</a>
-      <a href="#agents">Agent harness</a>
+      <a href="#architecture">How it works</a>
+      <a href="#agents">Workflow direction</a>
       <a href="#roadmap">Roadmap</a>
-      <a class="nav-cta" href="https://app.sovereignmail.com">Open app</a>
+      <a href="#pricing">Pricing</a>
+      <a class="nav-cta" href="https://app.mailsovereign.com">Open app</a>
     </nav>
   </header>
 
@@ -32,46 +33,46 @@
     <section class="hero shell">
       <div class="hero-copy">
         <div class="eyebrow"><span class="pulse"></span> Open-source infrastructure, under active development</div>
-        <h1>Your domains.<br><span>Your mail.</span><br>Your rules.</h1>
-        <p class="lede">Run email across every domain from infrastructure you control, then give governed AI agents the power to triage, draft, route, and follow up without silently sending on your behalf.</p>
+        <h1>Your domains.<br><span>Your providers.</span><br>One inbox.</h1>
+        <p class="lede">Connect existing MXroute, Namecheap Private Email, Google Workspace, and other IMAP/SMTP mailboxes without moving your websites or DNS. Read and send from one private workspace.</p>
         <div class="actions">
-          <a class="button primary" href="https://app.sovereignmail.com">Open Sovereign Mail <span>↗</span></a>
+          <a class="button primary" href="https://app.mailsovereign.com">Open Sovereign Mail <span>↗</span></a>
           <a class="button secondary" href="#architecture">Explore the system</a>
         </div>
         <div class="proof-strip" aria-label="Product principles">
-          <span>AGPL open source</span><i></i><span>Customer-owned data</span><i></i><span>Approval-gated agents</span>
+          <span>Keep DNS and MX records</span><i></i><span>Exact-address SMTP</span><i></i><span>Encrypted credentials</span>
         </div>
       </div>
 
-      <div class="cockpit" aria-label="Illustration of Sovereign Mail routing domains through policy-gated agents">
+      <div class="cockpit" aria-label="Illustration of Sovereign Mail combining existing provider mailboxes">
         <div class="cockpit-head">
-          <div><span class="status-dot"></span> Sovereign control plane</div>
-          <span class="live-label">POLICY ACTIVE</span>
+          <div><span class="status-dot"></span> Connected mailboxes</div>
+          <span class="live-label">SYNC ACTIVE</span>
         </div>
         <div class="domain-list">
           <article class="domain-card selected">
             <div class="domain-mark amber">MS</div>
-            <div><strong>sovereignmail.com</strong><small>Primary domain · healthy</small></div>
+            <div><strong>hello@mailsovereign.com</strong><small>MXroute · ready</small></div>
             <span class="health">●</span>
           </article>
           <article class="domain-card">
             <div class="domain-mark blue">NS</div>
-            <div><strong>northstar.example</strong><small>3 mailboxes · monitored</small></div>
+            <div><strong>support@client-one.com</strong><small>Namecheap · ready</small></div>
             <span class="health">●</span>
           </article>
           <article class="domain-card">
             <div class="domain-mark violet">AW</div>
-            <div><strong>agency.example</strong><small>8 aliases · monitored</small></div>
+            <div><strong>ops@agency.example</strong><small>Google Workspace · ready</small></div>
             <span class="health">●</span>
           </article>
         </div>
-        <div class="route-line"><span>Inbound message</span><b></b><span>Policy engine</span></div>
+        <div class="route-line"><span>Existing provider</span><b></b><span>Sovereign Mail</span></div>
         <div class="agent-card">
-          <div class="agent-icon">✦</div>
-          <div class="agent-copy"><strong>Agent proposed a reply</strong><small>Evidence attached · sender scope verified</small></div>
-          <span class="awaiting">AWAITING APPROVAL</span>
+          <div class="agent-icon">✓</div>
+          <div class="agent-copy"><strong>Provider route verified</strong><small>IMAP import · exact-address SMTP sending</small></div>
+          <span class="awaiting">READY</span>
         </div>
-        <div class="cockpit-foot"><span>Read ✓</span><span>Classify ✓</span><span>Draft ✓</span><span class="locked">Send requires approval</span></div>
+        <div class="cockpit-foot"><span>IMAP ✓</span><span>SMTP ✓</span><span>Inbox sync ✓</span><span class="locked">Every 5 minutes</span></div>
       </div>
     </section>
 
@@ -79,34 +80,34 @@
       <div class="shell manifesto-grid">
         <p class="section-number">01 / PRINCIPLE</p>
         <div>
-          <h2>Email should be infrastructure,<br>not another landlord.</h2>
-          <p>Conventional hosting charges per mailbox while keeping operations opaque. Sovereign Mail is being built around domains you own, resources you control, and migration paths you can reverse.</p>
+          <h2>Your email should not be<br>scattered across providers.</h2>
+          <p>This release brings mailboxes you already host into one workspace. It does not yet replace MXroute or create free provider mailboxes. The long-term goal is customer-controlled hosting across many domains without per-mailbox lock-in.</p>
         </div>
       </div>
     </section>
 
     <section class="section shell" id="architecture">
       <div class="section-intro">
-        <p class="section-number">02 / ARCHITECTURE</p>
-        <h2>One cockpit for the entire mail estate.</h2>
-        <p>Separate the public surface, operator controls, and delivery infrastructure without losing one coherent system.</p>
+        <p class="section-number">02 / HOW IT WORKS</p>
+        <h2>Keep the systems that already work.</h2>
+        <p>Your public site can stay on Vercel, your domain can stay at Namecheap, and your MX records can keep pointing to the provider that hosts the mailbox.</p>
       </div>
       <div class="feature-grid">
         <article class="feature wide">
-          <div class="feature-top"><span>DOMAIN OPERATIONS</span><b>01</b></div>
-          <h3>Every domain, visible at once.</h3>
-          <p>Mailboxes, aliases, catch-all policy, DNS readiness, reputation signals, storage, and delivery health in one operator view.</p>
-          <div class="mini-domains"><span>sovereignmail.com <i>ready</i></span><span>client-one.com <i>ready</i></span><span>client-two.ca <i>review</i></span></div>
+          <div class="feature-top"><span>PROVIDER-FIRST</span><b>01</b></div>
+          <h3>Connect the mailboxes you already pay for.</h3>
+          <p>Choose a known service or enter secure IMAP and SMTP settings. Sovereign Mail verifies the exact mailbox, imports its Inbox, and leaves its original provider authoritative.</p>
+          <div class="mini-domains"><span>hello@mailsovereign.com <i>MXroute</i></span><span>support@client-one.com <i>Namecheap</i></span><span>ops@agency.example <i>Google</i></span></div>
         </article>
         <article class="feature">
-          <div class="feature-top"><span>SAFE MIGRATION</span><b>02</b></div>
-          <h3>No blind MX cutovers.</h3>
-          <p>Capture the current state, generate a migration plan, verify prerequisites, and retain a tested rollback record.</p>
+          <div class="feature-top"><span>SAFE SENDING</span><b>02</b></div>
+          <h3>The From address chooses the route.</h3>
+          <p>Mail from a connected address uses that mailbox's SMTP provider. If its connection is unavailable, sending stops instead of silently falling back through another system.</p>
         </article>
         <article class="feature">
-          <div class="feature-top"><span>DELIVERABILITY</span><b>03</b></div>
-          <h3>Configuration is not proof.</h3>
-          <p>Test real delivery against major providers, inspect authentication, and block production claims until messages arrive.</p>
+          <div class="feature-top"><span>ADVANCED OPTION</span><b>03</b></div>
+          <h3>Direct Cloudflare delivery is optional.</h3>
+          <p>Use Cloudflare only when you intentionally want it to replace an external mailbox provider. Connecting existing hosting never requires moving your website or DNS.</p>
         </article>
       </div>
     </section>
@@ -114,15 +115,15 @@
     <section class="agent-section" id="agents">
       <div class="shell agent-layout">
         <div class="section-intro light">
-          <p class="section-number">03 / AGENT HARNESS</p>
-          <h2>Useful autonomy.<br>Explicit authority.</h2>
-          <p>Agents operate through narrow capabilities, live mailbox permissions, policy evaluation, and durable audit evidence.</p>
+          <p class="section-number">03 / WORKFLOW DIRECTION</p>
+          <h2>Automation with guardrails,<br>not surprise sending.</h2>
+          <p>Sovereign Mail already exposes permissioned mail tools. Broader triage, routing, approval, and follow-up workflows remain product direction—not a launch claim.</p>
         </div>
         <div class="policy-stack">
-          <div class="policy"><span>01</span><div><strong>Observe</strong><small>Read and classify allowed mailboxes</small></div><b>ALLOW</b></div>
-          <div class="policy"><span>02</span><div><strong>Prepare</strong><small>Summarize, extract, route, and draft</small></div><b>ALLOW</b></div>
-          <div class="policy"><span>03</span><div><strong>Commit</strong><small>Send, delete, export, or change routing</small></div><b class="review">REVIEW</b></div>
-          <div class="audit-line">Every action → identity · source · policy · approval · outcome</div>
+          <div class="policy"><span>01</span><div><strong>Connect</strong><small>Verify one exact mailbox and provider route</small></div><b>LIVE</b></div>
+          <div class="policy"><span>02</span><div><strong>Operate</strong><small>Read, compose, reply, forward, and synchronize</small></div><b>LIVE</b></div>
+          <div class="policy"><span>03</span><div><strong>Automate</strong><small>Classify, route, draft, approve, and follow up</small></div><b class="review">PLANNED</b></div>
+          <div class="audit-line">Credentials stay sealed · provider failures fail closed · mail content is never logged</div>
         </div>
       </div>
     </section>
@@ -133,26 +134,79 @@
         <h2>Built in public, gated by evidence.</h2>
       </div>
       <ol class="roadmap">
-        <li class="done"><span>01</span><div><strong>Secure the foundation</strong><small>Fork, identity, test baseline, dependency hardening</small></div><b>COMPLETE</b></li>
-        <li class="active"><span>02</span><div><strong>Prove migration and delivery</strong><small>DNS snapshots, rollback, provider delivery tests</small></div><b>IN PROGRESS</b></li>
-        <li><span>03</span><div><strong>Operate every domain</strong><small>Health, mailboxes, aliases, retention, recovery</small></div><b>QUEUED</b></li>
-        <li><span>04</span><div><strong>Govern the agents</strong><small>Scopes, policy, approvals, audit, integrations</small></div><b>QUEUED</b></li>
+        <li class="done"><span>01</span><div><strong>Secure the foundation</strong><small>Private customer Worker, encrypted credentials, identity, access controls</small></div><b>COMPLETE</b></li>
+        <li class="done"><span>02</span><div><strong>Connect existing mailboxes</strong><small>Provider presets, IMAP Inbox import, exact-address SMTP sending</small></div><b>LIVE</b></li>
+        <li class="active"><span>03</span><div><strong>Operate more of the mailbox</strong><small>Additional folders, state sync, aliases, health, live-provider verification</small></div><b>NEXT</b></li>
+        <li><span>04</span><div><strong>Host mail across many domains</strong><small>Reduce per-mailbox dependence without making websites move</small></div><b>PLANNED</b></li>
+        <li><span>05</span><div><strong>Govern the workflows</strong><small>Scopes, policy, approvals, audit, and integrations</small></div><b>PLANNED</b></li>
       </ol>
+    </section>
+
+    <section class="pricing-section" id="pricing">
+      <div class="shell">
+        <div class="section-intro light">
+          <p class="section-number">05 / PRICING</p>
+          <h2>Keep mail free.<br>Add AI when it helps.</h2>
+          <p>The complete AGPL mail application remains self-hosted and usable without a subscription. Paid plans unlock built-in AI actions and model credits, never human services or control of your mail.</p>
+        </div>
+        <div class="pricing-grid">
+          <article class="price-card primary-price">
+            <p class="price-label">AI STARTER</p>
+            <div class="price"><strong>$9</strong><span>CAD<br>per workspace / month</span></div>
+            <ul>
+              <li>300 AI credits each billing period</li>
+              <li>Thread summaries, reply drafts, and task extraction</li>
+              <li>Fast model access inside Sovereign Mail</li>
+              <li>Cancel without disabling core mail</li>
+            </ul>
+            <a class="button price-button" href="https://app.mailsovereign.com/settings/ai">Choose AI Starter <span>↗</span></a>
+          </article>
+          <article class="price-card primary-price">
+            <p class="price-label">AI PRO</p>
+            <div class="price"><strong>$19</strong><span>CAD<br>per workspace / month</span></div>
+            <ul>
+              <li>1,500 AI credits each billing period</li>
+              <li>Thread summaries, reply drafts, and task extraction</li>
+              <li>Fast and quality model access</li>
+              <li>Shared workspace credit balance</li>
+            </ul>
+            <a class="button price-button" href="https://app.mailsovereign.com/settings/ai">Choose AI Pro <span>↗</span></a>
+          </article>
+          <article class="price-card">
+            <p class="price-label">SELF-HOSTED PRODUCT</p>
+            <div class="price"><strong>Free</strong><span>AGPL-3.0<br>no per-seat fee</span></div>
+            <ul>
+              <li>Complete public source code</li>
+              <li>Customer-owned Cloudflare deployment</li>
+              <li>All core mail and account features</li>
+              <li>Public documentation and issue tracker</li>
+            </ul>
+            <a class="button secondary" href="https://github.com/shadoprizm/mailsovereign">View source <span>↗</span></a>
+          </article>
+        </div>
+        <p class="pricing-note">AI plans provide automated software and model access only—no installation, management, priority support, SLA, or on-call service. Model actions run only when selected and use the deployment's Cloudflare Workers AI binding; underlying Cloudflare usage charges may apply. Prices exclude applicable taxes. See <a href="/refunds">refunds</a> and <a href="/terms">terms</a>.</p>
+      </div>
     </section>
 
     <section class="closing shell">
       <div>
         <p class="section-number">SOVEREIGN MAIL</p>
-        <h2>Own the route from domain<br>to decision.</h2>
+        <h2>Start with one mailbox.<br>Keep everything else in place.</h2>
       </div>
-      <a class="button primary" href="https://app.sovereignmail.com">Open Sovereign Mail <span>↗</span></a>
+      <a class="button primary" href="https://app.mailsovereign.com">Open Sovereign Mail <span>↗</span></a>
     </section>
   </main>
 
   <footer class="shell footer">
     <span>© <span id="year"></span> Sovereign Mail</span>
     <span>Independent AGPL project, forked from HQBase</span>
-    <a href="https://github.com/shadoprizm/mailsovereign">GitHub ↗</a>
+    <nav aria-label="Policies">
+      <a href="/privacy">Privacy</a>
+      <a href="/terms">Terms</a>
+      <a href="/refunds">Refunds</a>
+      <a href="/support">Support</a>
+      <a href="/source">Source</a>
+    </nav>
   </footer>
   <script src="/script.js" defer></script>
 </body>

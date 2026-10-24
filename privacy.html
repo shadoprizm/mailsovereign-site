@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="How Sovereign Mail handles site, billing, support, and customer-owned mail data.">
+  <link rel="canonical" href="https://mailsovereign.com/privacy"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="/styles.css">
+  <title>Privacy — Sovereign Mail</title>
+</head>
+<body>
+  <header class="nav shell"><a class="brand" href="/"><img src="/favicon.svg" width="34" height="34" alt=""><span>Sovereign Mail</span></a><nav aria-label="Primary navigation"><a href="/#pricing">Pricing</a><a href="/support">Support</a><a class="nav-cta" href="https://app.mailsovereign.com">Open app</a></nav></header>
+  <main class="legal-main shell">
+    <header class="legal-header"><p class="section-number">PRIVACY</p><h1>Your mail stays in infrastructure you control.</h1><p>This notice explains the separate data boundaries for the public website, a customer-owned Sovereign Mail deployment, and optional paid services.</p></header>
+    <div class="legal-grid"><aside class="legal-aside">Effective August 18, 2026<br>Last updated August 18, 2026</aside><article class="legal-content">
+      <h2>Customer-owned application data</h2><p>Sovereign Mail is deployed to Cloudflare resources controlled by the workspace owner. Mail copies, attachments, account records, provider connection records, and Cloudflare credentials stay in that customer deployment. The public website does not receive them. Provider passwords are encrypted in the customer deployment and mail content is not written to application logs.</p>
+      <h2>Existing mail providers</h2><p>When a workspace connects an IMAP and SMTP account, that provider continues to receive and send the original mail. Its own privacy terms still apply. Sovereign Mail stores the synchronized copy in the customer-owned Cloudflare account.</p>
+      <h2>Website and billing data</h2><p>The public website host may process ordinary request information such as IP address, browser, requested page, timestamp, and security events. If you buy an AI plan, Stripe processes payment and billing details under its own privacy terms. Sovereign Mail keeps the Stripe customer, subscription, product, price, status, and event identifiers needed to provide AI access; it does not store full card details.</p><p>AI runs only when a signed-in person selects an action. The bounded conversation text is processed through the deployment's Cloudflare Workers AI binding; attachments are excluded. Sovereign Mail does not store the prompt or response in billing or usage records. Usage records contain only internal identifiers, feature, model class, token counts, credits, result state, and timestamp.</p><p>If you report a bug, provide only the minimum information needed. Do not send passwords, Cloudflare tokens, private keys, raw mail, prompts, model responses, or message bodies.</p>
+      <h2>Use, retention, and disclosure</h2><p>Information is used to operate the site, prevent abuse, fulfill paid service, answer support requests, and meet legal obligations. Billing and support records are kept only as long as needed for those purposes, accounting, disputes, and security. Information is disclosed to infrastructure and payment providers only as needed, or when legally required. Sovereign Mail does not sell personal information.</p>
+      <h2>Your choices</h2><p>Members can delete their personal account from <strong>Settings → Account</strong>. Owners must transfer ownership or remove the customer deployment. See <a href="/account-deletion">Account deletion</a> for the exact scope. For a privacy request, open a private support request through <a href="/support">Support</a>.</p>
+      <div class="legal-callout">The public AGPL source is available without an account or subscription. Review it at <a href="https://github.com/shadoprizm/mailsovereign">GitHub</a>.</div>
+    </article></div>
+  </main>
+  <footer class="shell footer legal-footer"><span>© <span id="year"></span> Sovereign Mail</span><nav><a href="/terms">Terms</a><a href="/refunds">Refunds</a><a href="/support">Support</a><a href="/source">Source</a></nav></footer><script src="/script.js" defer></script>
+</body></html>

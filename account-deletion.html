@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Delete a Sovereign Mail member account or safely remove an owner workspace.">
+  <link rel="canonical" href="https://mailsovereign.com/account-deletion"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="/styles.css">
+  <title>Account deletion — Sovereign Mail</title>
+</head>
+<body>
+  <header class="nav shell"><a class="brand" href="/"><img src="/favicon.svg" width="34" height="34" alt=""><span>Sovereign Mail</span></a><nav aria-label="Primary navigation"><a href="/privacy">Privacy</a><a href="/support">Support</a><a class="nav-cta" href="https://app.mailsovereign.com/settings/account">Open account settings</a></nav></header>
+  <main class="legal-main shell"><header class="legal-header"><p class="section-number">ACCOUNT DELETION</p><h1>Remove personal access without deleting shared mail.</h1><p>Sovereign Mail separates a person’s account data from the workspace mail and infrastructure controlled by the owner.</p></header>
+    <div class="legal-grid"><aside class="legal-aside">Self-service for members<br>Owner safety enforced</aside><article class="legal-content">
+      <h2>Members and administrators</h2><p>Sign in, open <strong>Settings → Account</strong>, choose <strong>Delete my account</strong>, and type the exact confirmation phrase. Recent authentication is required.</p>
+      <h2>What is removed</h2><p>Deletion revokes sessions and credentials and removes personal mailbox grants, OAuth tokens, push subscriptions, preferences, private drafts and their attachment objects, signatures, and onboarding records. The login identity is replaced by a non-identifying deleted-user tombstone so database and security history remain structurally valid.</p>
+      <h2>What remains</h2><p>Shared workspace mail, mailbox configuration, domains, provider connections, infrastructure, and records owned by other users remain. Historical audit entries may keep an internal resource identifier with the personal actor removed.</p>
+      <h2>Workspace owners</h2><p>The active owner cannot self-delete and orphan a deployment. Transfer ownership to another active person first, then delete the former owner as a non-owner. If the entire workspace should be removed, use the manifest-controlled destroy process to remove only the Cloudflare resources recorded as belonging to that deployment.</p>
+      <h2>If you cannot sign in</h2><p>Contact the workspace owner for an access change. For a managed-service privacy request, use <a href="/support">Support</a> without sending credentials or mail content.</p>
+      <div class="legal-callout"><a href="https://app.mailsovereign.com/settings/account">Open Sovereign Mail account settings ↗</a></div>
+    </article></div>
+  </main>
+  <footer class="shell footer legal-footer"><span>© <span id="year"></span> Sovereign Mail</span><nav><a href="/privacy">Privacy</a><a href="/terms">Terms</a><a href="/refunds">Refunds</a><a href="/source">Source</a></nav></footer><script src="/script.js" defer></script>
+</body></html>
